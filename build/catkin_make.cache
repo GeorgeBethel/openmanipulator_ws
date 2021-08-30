@@ -1,0 +1,2 @@
+manipulator_moveit_config:ur5_robot_manipulator
+-DCATKIN_DEVEL_PREFIX=/home/george/openmanipulator_ws/devel -DCMAKE_INSTALL_PREFIX=/home/george/openmanipulator_ws/install -G Unix Makefiles

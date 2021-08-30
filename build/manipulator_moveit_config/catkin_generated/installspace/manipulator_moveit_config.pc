@@ -1,0 +1,8 @@
+prefix=/home/george/openmanipulator_ws/install
+
+Name: manipulator_moveit_config
+Description: Description of manipulator_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/george/openmanipulator_ws/install/lib 
+Requires: 

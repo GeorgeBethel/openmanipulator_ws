@@ -1,0 +1,49 @@
+# MoveIt-specific simulation settings
+moveit_sim_hw_interface:
+  joint_model_group: controllers_initial_group_
+  joint_model_group_pose: controllers_initial_pose_
+# Settings for ros_control control loop
+generic_hw_control_loop:
+  loop_hz: 300
+  cycle_time_error_threshold: 0.01
+# Settings for ros_control hardware interface
+hardware_interface:
+  joints:
+    - shoulder_base_joint
+    - shoulder_arm_joint
+    - arm_arm2_joint
+    - arm2_arm3_joint
+    - arm3_end_effector_joint
+  sim_control_mode: 1  # 0: position, 1: velocity
+# Publish all joint states
+# Creates the /joint_states topic necessary in ROS
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+arm_controller:
+  type: position_controller/JointTrajectoryController
+  joints:
+    - shoulder_base_joint
+    - shoulder_arm_joint
+    - arm_arm2_joint
+    - arm2_arm3_joint
+    - arm3_end_effector_joint 
+  gains:
+
+    shoulder_base_joint: {p: 100, d: 1, i_clamp: 1}
+    shoulder_arm_joint: {p: 100, d: 1, i_clamp: 1}
+    arm_arm2_joint: {p: 100, d: 1, i_clamp: 1}
+    arm2_arm3_joint: {p: 100, d: 1, i_clamp: 1}
+    arm3_end_effector_joint: {p: 100, d: 1, i_clamp: 1}
+
+controller_list:
+  - name: ur5_robot_manipulator/arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - shoulder_base_joint
+      - shoulder_arm_joint
+      - arm_arm2_joint
+      - arm2_arm3_joint
+      - arm3_end_effector_joint 

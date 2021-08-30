@@ -1,0 +1,8 @@
+prefix=/home/george/openmanipulator_ws/install
+
+Name: ur5_robot_manipulator
+Description: Description of ur5_robot_manipulator
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/george/openmanipulator_ws/install/lib 
+Requires: 

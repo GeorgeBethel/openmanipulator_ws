@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ur5_robot_manipulator" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<link name="world"/>
+  <joint name="fixed" type="fixed">
+	<parent link="world"/>
+	<origin xyz="0.16492 .15 -0.11" rpy="0 0 1.9"/>
+	<child link="base_link"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.021007 0.28947 0.0061873"
+        rpy="0 0 0" />
+      <mass
+        value="0.56284" />
+      <inertia
+        ixx="0.00062585"
+        ixy="-1.1353E-22"
+        ixz="1.1112E-20"
+        iyy="0.0010178"
+        iyz="1.2109E-22"
+        izz="0.00062585" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_Link">
+    <inertial>
+      <origin
+        xyz="0.0065578 0.075603 1.1315E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.0823" />
+      <inertia
+        ixx="0.0018986"
+        ixy="-2.0558E-05"
+        ixz="4.7959E-09"
+        iyy="0.0016125"
+        iyz="9.8203E-10"
+        izz="0.0021625" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/shoulder_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/shoulder_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_base_joint"
+    type="revolute">
+    <origin
+      xyz="0.021007 -0.0061873 0.29955"
+      rpy="1.5708 0 2.8208" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="4"
+      effort="3"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_Link">
+    <inertial>
+      <origin
+        xyz="0.143782974771491 0.19355146427782 -4.02693275641797E-07"
+        rpy="0 0 0" />
+      <mass
+        value="3.19255597246339" />
+      <inertia
+        ixx="0.0740663665718892"
+        ixy="0.00125590529074301"
+        ixz="9.5243675255624E-09"
+        iyy="0.00369985043089469"
+        iyz="-2.35227359024687E-07"
+        izz="0.0747821188201623" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/arm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/arm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_arm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.020615 0.0785 0"
+      rpy="-0.30332 0 0" />
+    <parent
+      link="shoulder_Link" />
+    <child
+      link="arm_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="4"
+      effort="3"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm2_Link">
+    <inertial>
+      <origin
+        xyz="-0.0264479695995214 0.19355144403667 -3.99274730167321E-07"
+        rpy="0 0 0" />
+      <mass
+        value="3.19255425490173" />
+      <inertia
+        ixx="0.0740663496101479"
+        ixy="0.00125590738579559"
+        ixz="1.16925686329331E-08"
+        iyy="0.00369984819211261"
+        iyz="-2.36422770259368E-07"
+        izz="0.0747821027063394" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/arm2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/arm2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_arm2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.41 0"
+      rpy="1.9882 0 3.1416" />
+    <parent
+      link="arm_Link" />
+    <child
+      link="arm2_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="4"
+      effort="3"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm3_Link">
+    <inertial>
+      <origin
+        xyz="0.206202752776446 0.193551444410303 -3.97305547905624E-07"
+        rpy="0 0 0" />
+      <mass
+        value="3.19255413696875" />
+      <inertia
+        ixx="0.0740663485863286"
+        ixy="0.00125590750417122"
+        ixz="1.1796988261259E-08"
+        iyy="0.00369984825268348"
+        iyz="-2.36223663448143E-07"
+        izz="0.0747821017315746" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/arm3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/arm3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_arm3_joint"
+    type="revolute">
+    <origin
+      xyz="0.06242 0.41 0"
+      rpy="1.3976 0 3.1416" />
+    <parent
+      link="arm2_Link" />
+    <child
+      link="arm3_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="4"
+      effort="3"
+      velocity="0" />
+  </joint>
+  <link
+    name="end_effector_Link">
+    <inertial>
+      <origin
+        xyz="0.00816424968547602 -8.40535159252198E-08 0.0938564384562105"
+        rpy="0 0 0" />
+      <mass
+        value="0.694673478091543" />
+      <inertia
+        ixx="0.000745536516391558"
+        ixy="-2.85339379451884E-09"
+        ixz="4.58218121411216E-05"
+        iyy="0.00111723612968963"
+        iyz="-1.3944512217151E-09"
+        izz="0.000952630970924235" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/end_effector_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ur5_robot_manipulator/meshes/end_effector_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm3_end_effector_joint"
+    type="revolute">
+    <origin
+      xyz="0.0012584 0.41 0"
+      rpy="1.5708 1.3802 1.5708" />
+    <parent
+      link="arm3_Link" />
+    <child
+      link="end_effector_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="4"
+      effort="3"
+      velocity="0" />
+  </joint>
+</robot>
