@@ -1,0 +1,30 @@
+ur5_robot_manipulator:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # posiiton controller
+  joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: shoulder_base_joint
+    pid: {p: 1000.0, i: 0.0, d: 1.0}
+
+  joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: shoulder_arm_joint
+    pid: {p: 1000.0, i: 0.0, d: 1.0}
+
+  joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: arm_arm2_joint
+    pid: {p: 1000.0, i: 0.0, d: 1.0}
+
+  joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: arm2_arm3_joint
+    pid: {p: 1000.0, i: 0.0, d: 1.0}
+
+  joint5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: arm3_end_effector_joint
+    pid: {p: 1000.0, i: 0.0, d: 1.0}
