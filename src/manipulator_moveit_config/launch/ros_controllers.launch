@@ -6,6 +6,9 @@
 
   <!-- Load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" args="--namespace=/ur5_robot_manipulator joint_state_controller arm_controller --timeout 20"/>
+    output="screen" args="arm_controller joint_state_controller"/>
+
+<node name ="robot_state_publisher" pkg="robot_state_publisher" type ="robot_state_publisher" respawn="true" output="screen"/>
 
 </launch>
+

@@ -13,12 +13,4 @@
     <rosparam command="load" file="$(find manipulator_moveit_config)/config/kinematics.yaml"/>
   </node>
 
-  <include file="$(find manipulator_moveit_config)/launch/moveit_rviz.launch">
-
-  <arg name="rviz_config" value="$(find manipulator_moveit_config)/launch/moveit.rviz"/>
-
-  <arg name="debug" value="$(arg debug)"/>
-
-  </include>
-
 </launch>

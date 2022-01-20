@@ -6,3 +6,6 @@ controller_list:
       - arm_arm2_joint
       - arm2_arm3_joint
       - arm3_end_effector_joint
+  - name: fake_end_effector_controller
+    joints:
+      - arm3_end_effector_joint
