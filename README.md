@@ -7,6 +7,6 @@ A URDF generated robot arm design similar to ur5. It is configured using moveit 
 
 #Manipulator Movement
 
-![alt created](https://github.com/GeorgeBethel/openmanipulator_ws/blob/main/src/manipulator_moveit_config/Manipulator.gif)
+![alt created](https://github.com/GeorgeBethel/openmanipulator_ws/blob/main/src/manipulator_moveit_config/Motion_planning.gif)
 
 
