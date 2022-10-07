@@ -1,0 +1,8 @@
+prefix=/home/george/openmanipulator_ws/install
+
+Name: ur_description
+Description: Description of ur_description
+Version: 1.2.5
+Cflags: 
+Libs: -L/home/george/openmanipulator_ws/install/lib 
+Requires: 

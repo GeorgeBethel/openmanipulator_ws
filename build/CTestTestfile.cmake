@@ -5,5 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("manipulator_control")
 subdirs("ur5_robot_manipulator")
 subdirs("manipulator_moveit_config")
+subdirs("panda_moveit_config")

@@ -24,6 +24,7 @@
         <link name="panda_hand" />
         <link name="panda_leftfinger" />
         <link name="panda_rightfinger" />
+        <joint name="panda_joint8" />
         <joint name="panda_hand_joint" />
         <joint name="panda_finger_joint1" />
         <joint name="panda_finger_joint2" />

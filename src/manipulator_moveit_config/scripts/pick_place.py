@@ -67,7 +67,7 @@ print ("")
 
 #We can get the joint values from the group and adjust some of the values:
 joint_goal = move_group.get_current_joint_values()
-joint_goal[0] = 0
+joint_goal[0] = -pi/4
 joint_goal[1] = -pi/4
 joint_goal[2] = -pi/4
 joint_goal[3] = -pi/2

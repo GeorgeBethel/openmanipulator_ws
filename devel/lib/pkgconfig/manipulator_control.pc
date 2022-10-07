@@ -1,0 +1,8 @@
+prefix=/home/george/openmanipulator_ws/devel
+
+Name: manipulator_control
+Description: Description of manipulator_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/george/openmanipulator_ws/devel/lib 
+Requires: 

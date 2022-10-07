@@ -131,8 +131,10 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/george/openmanipulator_ws/build/gtest/cmake_install.cmake")
+  include("/home/george/openmanipulator_ws/build/manipulator_control/cmake_install.cmake")
   include("/home/george/openmanipulator_ws/build/ur5_robot_manipulator/cmake_install.cmake")
   include("/home/george/openmanipulator_ws/build/manipulator_moveit_config/cmake_install.cmake")
+  include("/home/george/openmanipulator_ws/build/panda_moveit_config/cmake_install.cmake")
 
 endif()
 

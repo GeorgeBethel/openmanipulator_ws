@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: George Okoroafor
     author_email: gokoroafor@kognitiverobotics.com
-    generated_timestamp: 1630496697
+    generated_timestamp: 1631124177
