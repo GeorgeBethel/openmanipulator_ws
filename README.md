@@ -1,12 +1,20 @@
 # openmanipulator_ws
 A URDF generated robot arm design similar to ur5. It is configured using moveit and simulated using Gazebo, RViz and ROS
 
-#RViz view
+# Manipulator Movement
 
-![alt created](https://github.com/GeorgeBethel/openmanipulator_ws/blob/main/src/robot_arm.png)
+![alt created](https://github.com/GeorgeBethel/openmanipulator_ws/blob/main/src/manipulator_moveit_config/Manipulator.gif)
 
-#Manipulator Movement
+# To run the control the robot arm using the python script, run the command below
 
-![alt created](https://github.com/GeorgeBethel/openmanipulator_ws/blob/main/src/manipulator_moveit_config/Motion_planning.gif)
+```
+roslaunch manipulator_moveit_config demo.launch
+
+````
+```
+rosrun manipulator_moveit_config pick_place.py
+
+````
+
 
 
